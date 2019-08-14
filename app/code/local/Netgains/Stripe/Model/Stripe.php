@@ -1,4 +1,7 @@
 <?php
+
+/************************* Developed By: Rohit Dhiman  ***************************/
+
 require_once('stripe/lib/Stripe.php');
 class Netgains_Stripe_Model_Stripe extends Mage_Payment_Model_Method_Cc
 {
@@ -7,8 +10,8 @@ class Netgains_Stripe_Model_Stripe extends Mage_Payment_Model_Method_Cc
 	protected $_infoBlockType = 'stripe/info_pay';
 
 	//protected $_isGateway               = true;
-	protected $_canAuthorize            = false;
-	protected $_canCapture              = false;
+	protected $_canAuthorize            = true;
+	protected $_canCapture              = true;
 	//protected $_canCapturePartial       = true;
 	protected $_canRefund               = false;
 
@@ -161,7 +164,7 @@ class Netgains_Stripe_Model_Stripe extends Mage_Payment_Model_Method_Cc
 			catch (Exception $e) 
 				{
 					$this->debugData($e->getMessage());
-					Mage::throwException(Mage::helper('paygate')->__('Payment capturing error.'));
+					Mage::throwException(Mage::helper('paygate')->__($e->getMessage()));
 					die;
 				}
 				
