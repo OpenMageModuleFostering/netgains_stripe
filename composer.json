@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/netgains_stripe",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Create token before charging credit card.",
+    "authors": [
+    {
+        "name": "Rohit Dhiman",
+        "email": "biz@netgains.org"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
