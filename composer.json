@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/netgains_stripe",
+    "name": "openmage-module-fostering\/netgains_stripe",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Create token before charging credit card.",
     "authors": [
